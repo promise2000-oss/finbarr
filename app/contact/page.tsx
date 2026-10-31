@@ -1,0 +1,6 @@
+import Link from 'next/link'
+import { ArrowLeft, Mail, MapPin, Phone } from 'lucide-react'
+
+export default function ContactPage() {
+  return <main className="inner-page"><header className="inner-header"><Link href="/" className="inner-brand">SFC <span>St. Finbarr&apos;s College</span></Link><Link href="/" className="text-link dark-link">Back home <ArrowLeft size={16} /></Link></header><section className="inner-hero"><span className="eyebrow gold-text"><span className="eyebrow-line" /> Contact</span><h1>Come and<br /><em>connect.</em></h1><p>Our doors are open to families who want to learn more about the Finbarrian way.</p></section><section className="contact-grid"><div className="contact-card"><MapPin size={22} /><span>Visit us</span><p>St. Finbarr&apos;s College<br />Akoka, Yaba, Lagos</p></div><div className="contact-card"><Mail size={22} /><span>Email us</span><p><a href="mailto:info@stfinbarrscollege.org">info@stfinbarrscollege.org</a></p></div><div className="contact-card"><Phone size={22} /><span>Call the office</span><p><a href="tel:+2340000000000">+234 (0) 000 000 0000</a></p></div></section><footer className="inner-footer"><span>St. Finbarr&apos;s College · Akoka, Lagos</span><Link href="/admissions">Admissions <ArrowLeft size={15} /></Link></footer></main>
+}
