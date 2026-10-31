@@ -34,12 +34,13 @@ export default function Page() {
       <header className="site-header">
         <a href="#top" className="brand" aria-label="St. Finbarr's College home"><Crest /><span>St. Finbarr&apos;s<br /><em>College</em></span></a>
         <nav className="desktop-nav" aria-label="Main navigation">
-<a href="/story">Our story</a><a href="/academics">Academics</a><a href="/student-life">Student life</a><a href="/boarding">Boarding</a><a href="/admissions">Admissions</a><a href="/alumni">Alumni</a><a href="/contact">Contact</a>
+          <a href="/story">Our story</a><a href="#formation">Formation</a><a href="/admissions">Admissions</a><a href="/contact">Contact</a>
+          <div className="more-nav"><button className="more-trigger" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen}>More <ChevronDown size={15} /></button>{menuOpen && <div className="more-menu"><a href="/academics">Academics</a><a href="/student-life">Student life</a><a href="/boarding">Boarding</a><a href="/alumni">Alumni</a><a href="/faq">FAQ</a><a href="/news">News &amp; events</a><a href="/gallery">Gallery</a><a href="/downloads">Downloads</a></div>}</div>
         </nav>
         <div className="header-actions"><button className="icon-button" aria-label="Search" onClick={() => setSearchOpen(!searchOpen)}><Search size={19} /></button><a className="header-cta" href="#admissions">Apply now <ArrowUpRight size={16} /></a><button className="menu-button" aria-label={menuOpen ? 'Close menu' : 'Open menu'} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button></div>
         {searchOpen && <div className="search-panel"><Search size={18} /><input autoFocus placeholder="Search St. Finbarr&apos;s College" aria-label="Search the website" /><button onClick={() => setSearchOpen(false)}><X size={18} /></button></div>}
       </header>
-      {menuOpen && <div className="mobile-nav"><a href="/story" onClick={() => setMenuOpen(false)}>Our story</a><a href="#formation" onClick={() => setMenuOpen(false)}>Formation</a><a href="/admissions" onClick={() => setMenuOpen(false)}>Admissions</a><a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a></div>}
+      {menuOpen && <div className="mobile-nav"><a href="/story" onClick={() => setMenuOpen(false)}>Our story</a><a href="#formation" onClick={() => setMenuOpen(false)}>Formation</a><a href="/academics" onClick={() => setMenuOpen(false)}>Academics</a><a href="/student-life" onClick={() => setMenuOpen(false)}>Student life</a><a href="/boarding" onClick={() => setMenuOpen(false)}>Boarding</a><a href="/admissions" onClick={() => setMenuOpen(false)}>Admissions</a><a href="/alumni" onClick={() => setMenuOpen(false)}>Alumni</a><a href="/faq" onClick={() => setMenuOpen(false)}>FAQ</a><a href="/news" onClick={() => setMenuOpen(false)}>News &amp; events</a><a href="/gallery" onClick={() => setMenuOpen(false)}>Gallery</a><a href="/downloads" onClick={() => setMenuOpen(false)}>Downloads</a><a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a></div>}
 
       <section className="hero" id="top">
         <div className="hero-grid-lines" aria-hidden="true" />
